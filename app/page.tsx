@@ -11,6 +11,8 @@ export default function Component() {
     setIsVisible(true)
   }, [])
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden">
       {/* Hero Section */}
@@ -33,11 +35,16 @@ export default function Component() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group bg-gradient-to-r from-gray-800 to-black hover:from-gray-700 hover:to-gray-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center gap-2">
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=1387780583257673798&scope=bot&permissions=277025410048"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-r from-gray-800 to-black hover:from-gray-700 hover:to-gray-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center gap-2"
+            >
               <Plus className="w-5 h-5" />
               Adicionar ao Discord
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
 
@@ -172,10 +179,15 @@ export default function Component() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <button className="bg-gradient-to-r from-gray-800 to-black hover:from-gray-700 hover:to-gray-900 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center gap-2">
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=1387780583257673798&scope=bot&permissions=277025410048"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-gray-800 to-black hover:from-gray-700 hover:to-gray-900 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center gap-2"
+            >
               <Plus className="w-5 h-5" />
               Adicionar ao Discord
-            </button>
+            </a>
 
             <Link
               href="/termos"
@@ -199,7 +211,7 @@ export default function Component() {
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p>© 2024 Square News Bot. Todos os direitos reservados.</p>
+            <p>© {currentYear} Square News Bot. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
